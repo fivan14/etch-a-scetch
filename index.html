@@ -9,11 +9,19 @@
     <title>Document</title>
 </head>
 <body style="display: flex; justify-content: center;">
-    <div style="display: flex; justify-content: center; align-items: center;">
-        <div id="main-div" style="width: 460px; height: 460px; background-color: aquamarine; display: flex; flex-wrap: wrap; flex-shrink: 1">
-        
+    <div style="display: flex; justify-content: center; flex-wrap: wrap-reverse;">
+        <div id="form-container" style="align-self: center; margin-right: 10px;">
+            <form id="form" style="display: flex; flex-direction: column; justify-content: center; padding-top: 20px;">
+                <label for="rows" style="margin-left: 20px;">Enter grid size!</label>
+                <input type="text" style="height: 25px; border-radius: 5px; border: 1px solid gray; margin: 5px 20px 20px 20px;">
+                <input type="submit" value="Build grid" style="width: 100px; height: 30px; margin:0px 0px 20px 20px ;">
+            </form>
+        </div>
+        <div id="grid-container" style="display: flex; justify-content: center; align-items: center;">
+            <div id="main-div" style="width: 460px; height: 460px; background-color: aquamarine; display: flex; flex-wrap: wrap; flex-shrink: 1">
+            
+            </div>
         </div>
     </div>
-    
 </body>
 </html>
