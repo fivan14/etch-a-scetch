@@ -14,11 +14,24 @@
             <form id="form" style="display: flex; flex-direction: column; justify-content: center; padding-top: 20px;">
                 <label for="rows" style="margin-left: 20px;">Enter grid size!</label>
                 <input id="input-value" type="text" style="height: 25px; border-radius: 5px; border: 1px solid gray; margin: 5px 20px 20px 20px;">
+                
+                <div id="grid-info" style="margin: 0 0 20px 20px">
+                    <label for="display-grid">Resize grid?</label>
+                <input id="display-grid" type="checkbox">
+                </div>
+
+                <div id="grid-visibility" class="resize">
+                <label for="canvas-height" style="margin-left: 20px; display: block;">Canvas height</label>
+                <input id="canvas-height" name="canvas-size" type="text" style="display: block; height: 25px; border-radius: 5px; border: 1px solid gray; margin: 5px 20px 20px 20px";>
+                <label for="canvas-width" style="margin-left: 20px; display: block;">Canvas width</label>
+                <input id="canvas-width" name="canvas-width" type="text" style="display: block; height: 25px; border-radius: 5px; border: 1px solid gray; margin: 5px 20px 20px 20px";>
+                </div>
+                
                 <input type="submit" value="Build grid" style="width: 100px; height: 30px; margin:0px 0px 20px 20px ;">
             </form>
         </div>
         <div id="grid-container" style="display: flex; justify-content: center; align-items: center;">
-            <div id="main-div" style="width: 300px; height: 300px; background-color: aquamarine; display: flex; flex-wrap: wrap; overflow: hidden;">
+            <div id="main-div" style="width: 300px; height: 300px; background-color: aquamarine; display: flex; flex-wrap: wrap; overflow: hidden; margin: 1px">
             
             </div>
         </div>
