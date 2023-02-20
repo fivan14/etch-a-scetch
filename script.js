@@ -1,7 +1,8 @@
 const mainDiv = document.querySelector('#main-div')
 const form = document.querySelector('#form')
 const input = document.querySelector('#input-value')
-
+const displayGrid = document.querySelector('#display-grid')
+const gridVisibility = document.querySelector('#grid-visibility')
 //const gridNum = Number.parseInt(,10)
 
 
@@ -14,7 +15,7 @@ function addDivs(gridSize) {
     if (gridSize > 64) {
         return alert('Hey, max grid size is 64x64!')
     }
-    let divHeight = 301 / gridSize
+    let divHeight = 300 / gridSize
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
             mainDiv.insertAdjacentHTML('beforeend', `<div class='grid' style='background-color: white; height: ${divHeight - 2}px; width: ${divHeight - 2}px; border: 1px solid black;'></div>`)
@@ -61,9 +62,18 @@ mainDiv.addEventListener('mouseover', event => {
     onHover(element)
 
 })
+
+
+
 //back to original color on mouse out
 
 mainDiv.addEventListener('mouseout', event => {
     let element = event.target
     onLeave(element)
+})
+
+// event listener for gridDisplay checkbox
+
+displayGrid.addEventListener('change', () => {
+    gridVisibility.classList.toggle('resize')
 })
