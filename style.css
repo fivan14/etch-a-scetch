@@ -1,4 +1,9 @@
 #form-container, #grid-container {
     box-shadow: 7px 7px 5px lightblue;
     border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.resize {
+    display: none;
 }
