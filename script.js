@@ -1,8 +1,10 @@
 const mainDiv = document.querySelector('#main-div')
-const form = document.querySelector('#form')
 const input = document.querySelector('#input-value')
 const displayGrid = document.querySelector('#display-grid')
 const gridVisibility = document.querySelector('#grid-visibility')
+const slider = document.querySelector('#myRange')
+const userChoice = document.querySelector('#user-choice')
+
 //const gridNum = Number.parseInt(,10)
 
 
@@ -44,15 +46,6 @@ function onLeave(target) {
     }
 }
 
-// add event listener for grid layout
-
-form.addEventListener('submit', event => {
-    event.preventDefault()
-    addDivs(input.value)
-})
-
-
-//console.log(Number.parseInt(mainDiv.style.width, 10))
 
 // event listener for change color on mouseover
 
@@ -72,8 +65,13 @@ mainDiv.addEventListener('mouseout', event => {
     onLeave(element)
 })
 
-// event listener for gridDisplay checkbox
 
-displayGrid.addEventListener('change', () => {
-    gridVisibility.classList.toggle('resize')
+// event listener for slider
+console.log(slider.value)
+slider.addEventListener('input', event => {
+    
+    console.log(slider.value)
+    userChoice.textContent = `${slider.value} x ${slider.value}`
+    addDivs(slider.value)
 })
+
