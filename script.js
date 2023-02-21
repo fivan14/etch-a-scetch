@@ -1,14 +1,14 @@
 const mainDiv = document.querySelector('#main-div')
-const input = document.querySelector('#input-value')
 const displayGrid = document.querySelector('#display-grid')
 const gridVisibility = document.querySelector('#grid-visibility')
 const slider = document.querySelector('#myRange')
 const userChoice = document.querySelector('#user-choice')
+const remove = document.querySelector('#remove')
 
 //const gridNum = Number.parseInt(,10)
 
 
-console.log(document.querySelectorAll('div').length)
+
 
 //function that add's divs
 
@@ -75,3 +75,20 @@ slider.addEventListener('input', event => {
     addDivs(slider.value)
 })
 
+// clear button event listener
+
+remove.addEventListener('click', event => {
+    let divs = document.querySelectorAll('.grid')
+    if (divs.length !== 0 && remove.textContent === 'Remove border') {
+        divs.forEach(div => {
+            div.style.border = '1px solid white'
+        })
+        remove.textContent = 'Add border'
+    } else if (remove.textContent === 'Add border') {
+        divs.forEach(div => {
+            div.style.border = '1px solid black'
+        })
+        remove.textContent = 'Remove border'
+    }
+    
+} )
