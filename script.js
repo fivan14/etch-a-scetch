@@ -73,6 +73,7 @@ slider.addEventListener('input', event => {
     console.log(slider.value)
     userChoice.textContent = `${slider.value} x ${slider.value}`
     addDivs(slider.value)
+    remove.textContent = 'Remove border'
 })
 
 // clear button event listener
